@@ -27,12 +27,17 @@ public class Main {
         System.err.println("The file is not a valid PNG image: " + filePath);
         System.exit(1);
       }
-      // 60x90
-      // 590 - 680
-      // 145 - 205
-      BufferedImage subImage = image.getSubimage(145, 590, 55, 80);
-      CardAutoCoder cardAutoCoder = new CardAutoCoder();
-      String card = cardAutoCoder.cardAutoCode(subImage);
+      int initX = 145;
+      int initY = 590;
+      int cardW = 57;
+      int cardH = 80;
+      int widthBetweenCard = 15;
+      for (int i = 0; i < 5; i++) {
+        BufferedImage subImage = image.getSubimage(initX, initY, cardW, cardH);
+        CardAutoCoder cardAutoCoder = new CardAutoCoder();
+        String card = cardAutoCoder.cardAutoCode(subImage);
+        initX += (cardW + widthBetweenCard);
+      }
     } catch (IOException e) {
       System.err.println("Error reading the file: " + e.getMessage());
       System.exit(1);
