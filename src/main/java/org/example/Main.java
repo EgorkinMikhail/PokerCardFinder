@@ -1,7 +1,6 @@
 package org.example;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -31,8 +30,9 @@ public class Main {
       // 60x90
       // 590 - 680
       // 145 - 205
-      BufferedImage subImage = image.getSubimage(145, 590, 60, 90);
-
+      BufferedImage subImage = image.getSubimage(145, 590, 55, 80);
+      CardAutoCoder cardAutoCoder = new CardAutoCoder();
+      String card = cardAutoCoder.cardAutoCode(subImage);
     } catch (IOException e) {
       System.err.println("Error reading the file: " + e.getMessage());
       System.exit(1);
