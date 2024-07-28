@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set JAR_NAME=PokerCardFinder-1.0-SNAPSHOT.jar.jar
+set JAR_NAME=PokerCardFinder-1.0-SNAPSHOT.jar
 
 if not exist "%~dp0%JAR_NAME%" (
     echo Error: %JAR_NAME% not found in the current directory.

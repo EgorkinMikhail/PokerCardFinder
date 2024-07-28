@@ -13,9 +13,10 @@ public class App {
         for (int i = 0; i < 5; i++) {
             BufferedImage card = solution.getCardByNum(initialImage, i);
             if (solution.checkIsCardExist(card)) {
-                System.out.printf("card %d: %-2s %s%n", i, solution.getValue(card), solution.getSuit(card));
+                System.out.printf("%s%s", solution.getValue(card), solution.getSuit(card).charAt(0));
             }
         }
+        System.out.println();
     }
 
     static BufferedImage readImageFromPath(String filePath) throws IOException {

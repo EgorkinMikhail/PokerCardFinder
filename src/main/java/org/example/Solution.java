@@ -107,11 +107,6 @@ public class Solution {
         return c1 == c3 && c1 == 120;
     }
 
-    private static void saveToFile(BufferedImage subImage, String name) throws IOException {
-        File outputfile = new File(name);
-        ImageIO.write(subImage, "png", outputfile);
-    }
-
     static BufferedImage readImageFromResource(String name) throws IOException {
         return ImageIO.read(Objects.requireNonNull(App.class.getClassLoader().getResourceAsStream(name)));
     }
