@@ -2,6 +2,7 @@
   <configuration default="false" name="App" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="org.example.App" />
     <module name="PokerCardFinder.main" />
+    <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/Downloads/imgs_marked" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="org.example.*" />
